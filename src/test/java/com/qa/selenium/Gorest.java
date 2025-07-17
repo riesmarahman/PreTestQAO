@@ -16,6 +16,14 @@ public class Gorest extends BaseTest {
     @Test(description = "Create user in GoRest")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Create User")
+    public void createUserTest() {
+        int userId = createUser();
+        getUserById(userId);
+        updateUser(userId);
+        deleteUser(userId);
+    }
+
+    @Step("Create new user")
     public int createUser() {
         Map<String, Object> body = new HashMap<>();
         body.put("name", "Nara Tama");
@@ -41,6 +49,7 @@ public class Gorest extends BaseTest {
         }
     }
 
+    @Step("getUser user ID: {userId}")
     public void getUserById(int userId) {
         Response response = given()
                 .header("Authorization", TOKEN)
@@ -55,6 +64,7 @@ public class Gorest extends BaseTest {
         }
     }
 
+    @Step("Update user ID: {userId}")
     public void updateUser(int userId) {
         Map<String, Object> updateBody = new HashMap<>();
         updateBody.put("name", "Nara Shikamaru");
@@ -75,6 +85,7 @@ public class Gorest extends BaseTest {
         }
     }
 
+    @Step("Delete user ID: {userId}")
     public void deleteUser(int userId) {
         Response response = given()
                 .header("Authorization", TOKEN)
@@ -91,8 +102,8 @@ public class Gorest extends BaseTest {
         Gorest gorest = new Gorest();
 //        int userId = 8012320;
         int userId = gorest.createUser();
-//        gorest.getUserById(userId);
-//        gorest.updateUser(userId);
-//        gorest.deleteUser(userId);
+        gorest.getUserById(userId);
+        gorest.updateUser(userId);
+        gorest.deleteUser(userId);
     }
 }
