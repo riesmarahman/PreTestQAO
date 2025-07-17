@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="GoRest Test Suite">
+  <test name="GoRest API Test">
+    <classes>
+      <class name="com.qa.selenium.Gorest"/>
+    </classes>
+  </test>
+</suite>

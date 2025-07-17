@@ -1,14 +1,21 @@
 package com.qa.selenium;
 
+import io.qameta.allure.*;
 import io.restassured.response.Response;
+import org.testng.annotations.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
+@Epic("Gorest API Automation")
+@Feature("User Management")
 public class Gorest extends BaseTest {
 
+    @Test(description = "Create user in GoRest")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Create User")
     public int createUser() {
         Map<String, Object> body = new HashMap<>();
         body.put("name", "Nara Tama");

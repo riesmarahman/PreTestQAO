@@ -9,11 +9,11 @@
   <version>1.0-SNAPSHOT</version>
 
   <dependencies>
-      <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>4.21.0</version>
-      </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.21.0</version>
+    </dependency>
 
     <dependency>
       <groupId>org.testng</groupId>
@@ -21,8 +21,6 @@
       <version>7.10.2</version>
       <scope>test</scope>
     </dependency>
-
-    <!-- Rest Assured -->
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
