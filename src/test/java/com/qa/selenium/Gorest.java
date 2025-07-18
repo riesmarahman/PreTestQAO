@@ -100,10 +100,10 @@ public class Gorest extends BaseTest {
 
     public static void main(String[] args) {
         Gorest gorest = new Gorest();
-//        int userId = 8014942;
-        int userId = gorest.createUser();
-        gorest.getUserById(userId);
-        gorest.updateUser(userId);
+        int userId = 8015172;
+//        int userId = gorest.createUser();
+//        gorest.getUserById(userId);
+//        gorest.updateUser(userId);
         gorest.deleteUser(userId);
     }
 }
