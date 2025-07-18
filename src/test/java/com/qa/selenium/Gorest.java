@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 @Feature("User Management")
 public class Gorest extends BaseTest {
 
-    @Test(description = "Create user in GoRest")
+    @Test
     @Severity(SeverityLevel.CRITICAL)
     @Story("Create User")
     public void createUserTest() {
@@ -100,7 +100,7 @@ public class Gorest extends BaseTest {
 
     public static void main(String[] args) {
         Gorest gorest = new Gorest();
-//        int userId = 8012320;
+//        int userId = 8014942;
         int userId = gorest.createUser();
         gorest.getUserById(userId);
         gorest.updateUser(userId);
